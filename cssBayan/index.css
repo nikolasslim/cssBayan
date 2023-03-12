@@ -80,3 +80,51 @@ html {
 .mem_list:hover {
   color: rgb(255, 255, 255);
 }
+@media (hover: none) and (pointer: coarse) {
+  .mem_list__arrow {
+    display: block;
+  }
+  .mem_list:hover .mem_list__arrow {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .memes {
+    width: 80%;
+  }
+  .header {
+    font-size: 2em;
+  }
+  .mem_list__title {
+    font-size: 1rem;
+  }
+  .mem_list__arrow {
+    width: 1em;
+    height: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .memes {
+    width: 80%;
+  }
+  .mem_list__title {
+    font-size: 1.2rem;
+  }
+  .mem_list__arrow {
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .memes {
+    width: 70%;
+  }
+  .mem_list__title {
+    font-size: 1.8rem;
+  }
+  .mem_list__arrow {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
