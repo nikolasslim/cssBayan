@@ -33,3 +33,50 @@ html {
   height: 0;
   transition: all 0.5s;
 }
+.mem_list__label_img {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mem_list__title {
+  font-size: 1.8em;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* hover accord */
+.mem_input:checked ~ label .mem_img,
+.mem_list__item:hover .mem_img {
+  width: 70%;
+  height: 70%;
+}
+.mem_input:checked ~ label .mem_list__arrow,
+.mem_list__item:hover .mem_list__arrow {
+  transform: rotate(-45deg);
+}
+.mem_input:checked ~ label .mem_list__title {
+  color: rgb(255, 255, 255);
+}
+.mem_list__item,
+.mem_list__button,
+.mem_img,
+.memes {
+  cursor: pointer;
+}
+
+.mem_list__arrow {
+  width: 1.5em;
+  height: 1.5em;
+  background: url("./assets/arrow.svg") center/cover no-repeat;
+  display: none;
+  filter: invert(100%);
+  transition: all 0.4s;
+}
+
+.mem_list:hover .mem_list__arrow {
+  display: block;
+}
+.mem_list:hover {
+  color: rgb(255, 255, 255);
+}
