@@ -1,0 +1,130 @@
+body {
+  margin: 0 auto;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: bisque;
+}
+.header {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Courier New", Courier, monospace;
+}
+.memes {
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgba(000, 000, 000, 0.3);
+  border-radius: 1rem;
+}
+
+.mem_list__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 2rem;
+}
+.mem_img {
+  width: 0;
+  height: 0;
+  transition: all 0.5s;
+}
+.mem_list__label_img {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mem_list__title {
+  font-size: 1.8em;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* hover accord */
+.mem_input:checked ~ label .mem_img,
+.mem_list__item:hover .mem_img {
+  width: 70%;
+  height: 70%;
+}
+.mem_input:checked ~ label .mem_list__arrow,
+.mem_list__item:hover .mem_list__arrow {
+  transform: rotate(-45deg);
+}
+.mem_input:checked ~ label .mem_list__title {
+  color: rgb(255, 255, 255);
+}
+.mem_list__item,
+.mem_list__button,
+.mem_img,
+.memes {
+  cursor: pointer;
+}
+
+.mem_list__arrow {
+  width: 1.5em;
+  height: 1.5em;
+  background: url("./assets/arrow.svg") center/cover no-repeat;
+  display: none;
+  filter: invert(100%);
+  transition: all 0.4s;
+}
+
+.mem_list:hover .mem_list__arrow {
+  display: block;
+}
+.mem_list:hover {
+  color: rgb(255, 255, 255);
+}
+@media (hover: none) and (pointer: coarse) {
+  .mem_list__arrow {
+    display: block;
+  }
+  .mem_list:hover .mem_list__arrow {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .memes {
+    width: 80%;
+  }
+  .header {
+    font-size: 2em;
+  }
+  .mem_list__title {
+    font-size: 1rem;
+  }
+  .mem_list__arrow {
+    width: 1em;
+    height: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .memes {
+    width: 80%;
+  }
+  .mem_list__title {
+    font-size: 1.2rem;
+  }
+  .mem_list__arrow {
+    width: 1.3em;
+    height: 1.3em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .memes {
+    width: 70%;
+  }
+  .mem_list__title {
+    font-size: 1.8rem;
+  }
+  .mem_list__arrow {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
